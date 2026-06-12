@@ -20,6 +20,14 @@
   font-size: 14px;
 }
 
+.yt-status {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text);
+  opacity: 0.7;
+  min-height: 1.5em;
+}
+
 .yt-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -38,6 +46,12 @@
   &:hover {
     box-shadow: var(--shadow);
     transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+    box-shadow: var(--shadow);
   }
 }
 
@@ -65,32 +79,5 @@
     font-size: 12px;
     color: var(--text);
     opacity: 0.7;
-  }
-}
-
-.yt-load-more {
-  margin-top: 24px;
-  padding: 10px 24px;
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  background: var(--accent);
-  cursor: pointer;
-  transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 0.9;
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
   }
 }
